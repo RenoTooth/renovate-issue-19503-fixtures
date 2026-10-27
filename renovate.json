@@ -1,11 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["npm"],
+  "enabledManagers": [
+    "npm"
+  ],
   "automerge": false,
   "dependencyDashboard": false,
   "packageRules": [
-    { "matchPackageNames": ["gitlab-ci-env"], "allowedVersions": "<=6.4.0" },
-    { "matchPackageNames": ["ky"], "allowedVersions": "<=1.1.0" },
-    { "matchFileNames": ["fixtures/mixed/**"], "groupName": "mixed sources", "separateMajorMinor": false, "separateMinorPatch": false }
-  ]
+    {
+      "matchPackageNames": [
+        "gitlab-ci-env"
+      ],
+      "allowedVersions": "<=6.4.0"
+    },
+    {
+      "matchPackageNames": [
+        "ky"
+      ],
+      "allowedVersions": "<=1.1.0"
+    },
+    {
+      "matchFileNames": [
+        "fixtures/mixed/**"
+      ],
+      "groupName": "mixed sources",
+      "separateMajorMinor": false,
+      "separateMinorPatch": false
+    }
+  ],
+  "baseBranchPatterns": [
+    "main"
+  ],
+  "branchPrefix": "renovate/19503-stage1/"
 }
